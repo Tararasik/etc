@@ -1,0 +1,398 @@
+.stan {
+  position: relative;
+}
+.stan .hat_wrap {
+  position: absolute;
+  left: -2px;
+  width: 154px;
+  height: 70px;
+  overflow: hidden;
+  z-index: 2;
+}
+.stan .hat {
+  background-color: #2f2f89;
+  width: 154px;
+  height: 154px;
+  -webkit-border-radius: 154px;
+          border-radius: 154px;
+}
+
+.stan .stripe_wrap {
+  position: absolute;
+  top: 50px;
+  overflow: hidden;
+  height: 30px;
+  width: 154px;
+}
+
+.stan .stripe {
+  position: absolute;
+  top: 11px;
+  background-color: #f00014;
+  height: 17px;
+  width: 100%;
+}
+
+.stan .stripe:before,
+.stan .stripe:after {
+  content: "";
+  background-color: #f00014;
+  position: absolute;
+  top: -11px;
+  left: -173px;
+  width: 500px;
+  height: 500px; 
+  -webkit-border-radius: 500px;
+          border-radius: 500px;
+}
+
+.stan .stripe:after {
+  background-color: #ffe1c4;
+  top: -2px;
+}
+
+.pompon_stripe,
+.pompon_stripe:before,
+.pompon_stripe:after {
+  content: "";
+  position: absolute;
+  left: 75px;
+  width: 3px;
+  height: 40px;
+  background-color: #f00014;
+  -webkit-border-radius: 3px/10px;
+          border-radius: 3px/10px;
+  -webkit-box-shadow: 0px 0px 1px #aaa;
+          box-shadow: 0px 0px 1px #aaa;
+  z-index: 3;
+}
+  .pompon_stripe:before {
+    left: 0;
+    -webkit-transform: rotate(22.5deg);
+       -moz-transform: rotate(22.5deg);
+        -ms-transform: rotate(22.5deg);
+         -o-transform: rotate(22.5deg);
+            transform: rotate(22.5deg);
+  }
+  .pompon_stripe:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .pompon_stripe_2 {
+    -webkit-transform: rotate(67.5deg);
+       -moz-transform: rotate(67.5deg);
+        -ms-transform: rotate(67.5deg);
+         -o-transform: rotate(67.5deg);
+            transform: rotate(67.5deg);
+  }
+  .pompon_stripe_3 {
+    -webkit-transform: rotate(135deg);
+       -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+         -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .pompon_stripe_3:after {
+    display: none;
+  }
+
+.stan .head {
+  position: relative;
+  top: 20px;
+  width: 150px;
+  height: 150px;
+  background-color: #ffe1c4;
+  -webkit-border-radius: 150px;
+          border-radius: 150px;
+  z-index: 2;
+}
+
+  .stan .eye {
+    position: absolute;
+    left: 35px;
+    top: 60px;
+    width: 40px;
+    height: 50px;
+    -webkit-border-radius: 20px/25px;
+            border-radius: 20px/25px;
+    background-color: #fff;
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+            transform: rotate(30deg);
+    z-index: 2;
+  }
+
+  .stan .eye_right {
+    left: 75px;
+    -webkit-transform: rotate(-30deg);
+       -moz-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+         -o-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+
+  .stan .eye:after {
+    /*-webkit-animation: left-eye 3s infinite alternate linear;
+       -moz-animation: left-eye 3s infinite alternate linear;
+         -o-animation: left-eye 3s infinite alternate linear;
+            animation: left-eye 3s infinite alternate linear;*/
+    content: "";
+    position: absolute;
+    left:25px;
+    top: 15px;
+    width:5px;
+    height: 5px;
+    background-color: #000;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    z-index: 2;
+  }
+
+  .stan .eye_right:after {
+    /*-webkit-animation: right-eye 3s infinite alternate linear;
+       -moz-animation: right-eye 3s infinite alternate linear;
+         -o-animation: right-eye 3s infinite alternate linear;
+            animation: right-eye 3s infinite alternate linear;*/
+    left:10px;
+  }
+
+  @-webkit-keyframes left-eye {
+    0% {
+      left: 25px;
+    }
+    80% {
+      left: 27px;
+      top: 10px;
+    }
+    90% {
+      left: 27px;
+      top: 8px;
+    }
+    100% {
+     left: 27px;
+      top: 12px; 
+    }
+  }
+
+  @-webkit-keyframes right-eye {
+    0% {
+      left: 10px;
+    }
+    80% {
+      left: 30px;
+      top: 20px;
+    }
+    90% {
+      left: 30px;
+      top: 18px; 
+    }
+    100% {
+      left: 30px;
+      top: 22px;  
+    }
+  }
+
+  .stan .mouth {
+    position: relative;
+    left: 50px;
+    top: 80px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    -webkit-border-radius: 50px;
+            border-radius: 50px;
+  }
+
+  .stan .mouth:before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 48px;
+    height: 48px;
+    background-color: #ffe1c4;
+    -webkit-border-radius: 48px;
+            border-radius: 48px;     
+    z-index: 1;
+  }
+
+  .stan .mouth:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 43px;
+    background-color: #ffe1c4;
+  }
+
+.stan .body {
+  position: relative;
+  width: 110px;
+  height: 75px;
+  left: 20px;
+  background-color: #803300;
+  -webkit-border-radius: 10px 10px 60px 60px/50px 50px 10px 10px;
+          border-radius: 10px 10px 60px 60px/50px 50px 10px 10px;
+  z-index: 1;
+}
+
+/*Zipper*/
+.stan .body:after {
+  content: "";
+  width: 2px;
+  height: 75px;
+  position: absolute;
+  left: 52px;
+  background-color: #000;
+  z-index: 2;
+}
+
+.stan .collar {
+  position: absolute;
+  left: 5px;
+  width: 100px;
+  height: 25px;
+  background-color: #f00014;
+  -webkit-border-radius: 0 0 60px 60px/ 0 0 40px 40px;
+          border-radius: 0 0 60px 60px/ 0 0 40px 40px;
+  z-index: 3;
+}
+.stan .collar:after {
+  content: "";
+  position: absolute;
+  left: 44px;
+  top: 20px;
+  border-top: 6px solid #803300;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.stan .button,
+.stan .button:before,
+.stan .button:after {
+  position: absolute;
+  left: 45px;
+  top: 28px;
+  width: 5px;
+  height: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #000;
+  z-index: 2;
+}
+.stan .button:before {
+  content: "";
+  left: 0;
+  top: 18px;
+}
+.stan .button:after {
+  content: "";
+  left: 0;
+  top: 36px;
+}
+
+.stan .hand {
+  position: absolute;
+  width: 18px;
+  height: 50px;
+  left: -5px;
+  background-color: #803300;
+  -webkit-transform: rotate(20deg);
+     -moz-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+       -o-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.stan .hand:before {
+  content: "";
+  width: 1px;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  background-color: #000;
+  -webkit-border-radius: 0 1px/0 20px ;
+          border-radius: 0 1px/0 20px ;
+  -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.3);
+          box-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+
+.stan .hand_right {
+  left: auto;
+  right: -5px;
+  -webkit-transform: rotate(-20deg);
+     -moz-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+       -o-transform: rotate(-20deg);
+          transform: rotate(-20deg); 
+}
+
+.stan .hand_left:before {
+  right: 0;
+}
+
+.stan .arm {
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  width: 22px;
+  height: 22px;
+  -webkit-border-radius: 22px;
+          border-radius: 22px;
+  background-color: #f00014;
+}
+
+.stan .arm:after {
+  content: "";
+  position: absolute;
+  background-color: #f00014;
+  width: 10px;
+  height: 10px;
+  left: 12px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  border: 1px solid #000;
+  
+}
+
+.stan .hand_right .arm:after {
+  left: 0;
+}
+
+.stan .legs {
+  position: relative;
+  top: -10px;
+  left: 22px;
+  width: 105px;
+  height: 20px;
+  background-color: #3652A3;
+}
+
+.stan .legs:before,
+.stan .legs:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 55px;
+  height: 5px;
+  background-color: #000;
+  -webkit-border-radius: 25px/5px;
+          border-radius: 25px/5px;
+  -webkit-border-bottom-left-radius: 0;
+          border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+          border-bottom-right-radius: 0;
+
+    
+}
+.stan .legs:after {
+  left: auto;
+  right: -4px;
+}
+
