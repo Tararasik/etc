@@ -1,0 +1,110 @@
+.kyle {
+  @details: #42b011;
+  @jacket: #ff6600;
+  @pants: #003334;
+
+  .hat,
+  .hat_details,
+  .collar,
+  .arm,
+  .arm:after {
+    background-color: @details
+  }
+
+  .collar:after {
+    border-top: 6px solid @jacket;
+  }
+
+  .hat {
+    position: relative;
+    height: 60px;
+    .border-radius(10px);
+    
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      height: 70px;
+      width: 30px;
+      position: absolute;
+      top: 100%;
+      left: -15px;
+      margin-top: -10px;
+      background-color: @details;
+      .border-radius(15px/35px);
+      .rotate(15deg);
+      .box-shadow(0 -1px 0 rgba(0,0,0,0.5) );
+    }
+
+    &:after {
+     .rotate(-15deg);
+     left: auto;
+     right: -15px;
+    }
+
+    
+    &_details {
+      position: absolute;
+      width: 137px;
+      height: 37px;
+      left: 9px;
+      bottom: -5px;
+      background-color: #288920;
+      .border-radius(5px 5px 10px 10px);
+      z-index: 2;
+      
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 8px;
+        width: 120px;
+        height: 5px;
+        background-color: @face;
+        .border-radius(70px 70px 0 0 / 5px 5px 0 0);
+      }
+    }
+  }
+
+  .mouth {
+    top: 20px;
+  }
+
+  .body,
+  .hand {
+    background-color: @jacket;
+  }
+
+  .legs {
+    background-color: @pants;
+  }
+
+  .pocket {
+    position: absolute;
+    overflow: hidden;
+    bottom: 10px;
+    left: 20px;
+    width: 18px;
+    height: 28px;
+    border: 2px solid rgba(0,0,0,0.5);
+    
+    &_right {
+      left: auto;
+      right: 20px;
+    }
+
+    &:after {
+      position: relative;
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      top: -9px;
+      left: 1px;
+      border: 2px solid rgba(0,0,0,0.5);
+      .rotate(45deg);
+    }
+    
+  }
+}

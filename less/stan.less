@@ -1,0 +1,100 @@
+.stan {
+  @hat: #2f2f89;
+  @pants: #3652A3;
+  @details: #f00014;
+  @jacket: #803300;
+
+  .hat {
+    background-color: @hat;
+  }
+
+  .stripe {
+    position: absolute;
+    top: 11px;
+    background-color: @details;
+    height: 17px;
+    width: 100%;
+
+    &_wrap {
+      position: absolute;
+      top: 50px;
+      overflow: hidden;
+      height: 30px;
+      width: 154px;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      background-color: @details;
+      position: absolute;
+      top: -11px;
+      left: -173px;
+      width: 500px;
+      height: 500px; 
+      .border-radius(500px);
+    }
+
+    &:after {
+      background-color: @face;
+      top: -2px;
+    }
+  }
+
+  .pompon_stripe {
+    &,
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 75px;
+      width: 3px;
+      height: 40px;
+      background-color: @details;
+      .border-radius(3px/10px);
+      .box-shadow(0px 0px 1px #aaa);
+      z-index: 3;
+    }
+
+    &:before {
+      left: 0;
+      .rotate(22.5deg);
+    }
+
+    &:after {
+      left: 0;
+      .rotate(45deg);
+    }
+
+    &_2 {
+      .rotate(67.5deg);
+    }
+
+    &_3 {
+      .rotate(135deg);
+    }
+
+    &_3:after {
+      display: none;
+    }
+  }
+
+  .body,
+  .hand {
+    background-color: @jacket;
+  }
+
+  .collar,
+  .arm,
+  .arm:after {
+    background-color: @details;
+  }
+
+  .collar:after {
+    border-top: 6px solid @jacket;
+  }
+
+  .legs {
+    background-color: @pants;
+  }
+}

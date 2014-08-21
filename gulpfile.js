@@ -4,11 +4,11 @@ var gulp = require('gulp'),
 gulp.task('default', ['less', 'watch']);
 
 gulp.task('less', function() {
-  gulp.src('./park.less')
+  gulp.src('less/park.less')
     .pipe(less({'strictMath': true}))
     .pipe(gulp.dest('./'));
 })
 
 gulp.task('watch', function() {
-  gulp.watch('./park.less', ['less'])
+  gulp.watch('less/*.less', ['less'])
 })
